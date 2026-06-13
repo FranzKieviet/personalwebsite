@@ -50,7 +50,7 @@ export default function Hero() {
     return (
         <Container maxWidth="md">
             <Typography variant="h2">
-                Hi! I'm Franz
+                Hi! I'm Franz 👋
             </Typography>
 
             <Typography variant="h5">
