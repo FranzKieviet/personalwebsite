@@ -12,6 +12,22 @@ const navButtonStyle = {
     color: "#0099D8",
     backgroundColor: "transparent",
   },
+
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    width: "0%",
+    height: "2px",
+    bottom: 0,
+    left: "50%",
+    backgroundColor: "#0099D8",
+    transition: "all 0.3s ease",
+    transform: "translateX(-50%)",
+  },
+
+  "&:hover::after": {
+    width: "70%",
+  },
 };
 
 export default function Navbar() {

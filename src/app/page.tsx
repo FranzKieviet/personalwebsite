@@ -1,15 +1,22 @@
 "use client";
-import Hero from "@/components/Hero";
+
+import { Container, Box } from "@mui/material";
 import Navbar from "@/components/Navbar";
-import { Container} from "@mui/material";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <Container >
+    <Box
+      sx={{
+        minHeight: "100vh",
+        background: "linear-gradient(135deg, #ffffff, #0099D8)",
+      }}
+    >
       <Navbar />
+
       <Container maxWidth="md" sx={{ mt: 10, textAlign: "center" }}>
         <Hero />
       </Container>
-    </Container>
+    </Box>
   );
 }
