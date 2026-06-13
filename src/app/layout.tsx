@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { CssBaseline } from "@mui/material";
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Built with Next.js + MUI",
+  title: "Franz Kieviet",
+  description: "Personal website showcasing projects and experience",
 };
 
 export default function RootLayout({

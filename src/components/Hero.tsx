@@ -5,6 +5,14 @@ import ArticleIcon from '@mui/icons-material/Article';
 import { Container, Stack, IconButton, Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
+const buttonHoverStyle = {
+  transition: "all 0.3s ease",
+  "&:hover": {
+    color: "#0099D8",
+    backgroundColor: "transparent",
+  },
+};
+
 const WORDS = ["software engineer", "public transportation enthusiast", "UC Berkeley graduate", "problem solver", "lifelong learner", "team player" ]
 
 export default function Hero() {
@@ -67,13 +75,13 @@ export default function Hero() {
             <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
                 {/* Stack to handle the layout between the buttons */}
                 <Stack direction="row" spacing={3}>
-                    <IconButton href="https://franzkieviet.com/resume" target="_blank" size="medium">
+                    <IconButton href="https://franzkieviet.com/resume" target="_blank" size="medium" sx={buttonHoverStyle}>
                         <ArticleIcon fontSize="large"/>
                     </IconButton>
-                    <IconButton href="https://github.com/franzkieviet" target="_blank" size="medium">
+                    <IconButton href="https://github.com/franzkieviet" target="_blank" size="medium" sx={buttonHoverStyle}>
                         <GitHubIcon fontSize="large"/>
                     </IconButton>
-                    <IconButton href="https://linkedin.com/in/franzkieviet" target="_blank" size="medium">
+                    <IconButton href="https://linkedin.com/in/franz-kieviet" target="_blank" size="medium" sx={buttonHoverStyle}>
                         <LinkedInIcon fontSize="large"/>
                     </IconButton>
                 </Stack>

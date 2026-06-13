@@ -7,6 +7,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --website-blue: #0099D8;
   }
 }
 
@@ -54,7 +55,7 @@ a {
 }
 
 .blueText {
-  color: #0099D8;
+  color: var(--website-blue);
   font-family: "Univers", sans-serif;
   font-weight: bold;
 }
