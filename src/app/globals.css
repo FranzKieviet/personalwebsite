@@ -47,3 +47,20 @@ a {
     color-scheme: dark;
   }
 }
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s steps(1) infinite;
+}
+
+.blueText {
+  color: #0099D8;
+  font-family: "Univers", sans-serif;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

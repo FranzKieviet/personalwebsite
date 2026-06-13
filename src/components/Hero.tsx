@@ -54,8 +54,9 @@ export default function Hero() {
             </Typography>
 
             <Typography variant="h5">
-                I am a {text}
-                <span style={{ borderRight: "2px solid black" }} />
+                I am a 
+                <span className="blueText"> {text}</span>
+                <span className="cursor">|</span>
             </Typography>
 
             <Typography variant="h6" sx={{ mt: 2 }}>
