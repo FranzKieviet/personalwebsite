@@ -1,22 +1,21 @@
 import "./globals.css";
-import type { Metadata } from "next";
-import { CssBaseline } from "@mui/material";
+import { Geist } from "next/font/google";
+import ThemeRegistry from "@/components/ThemeRegistry";
 
-export const metadata: Metadata = {
-  title: "Franz Kieviet",
-  description: "Personal website showcasing projects and experience",
-};
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+});
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body>
-        <CssBaseline />
-        {children}
+      <body className={geist.variable}>
+        <ThemeRegistry>{children}</ThemeRegistry>
       </body>
     </html>
   );

@@ -56,7 +56,7 @@ export default function Hero() {
 
 
     return (
-        <Container maxWidth="md">
+        <Container maxWidth="md" sx={{ py: 2 }}>
             <Typography variant="h2">
                 Hi! I'm Franz 👋
             </Typography>

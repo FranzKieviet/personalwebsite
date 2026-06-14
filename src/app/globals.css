@@ -60,6 +60,22 @@ a {
   font-weight: bold;
 }
 
+.sectionTitle{
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #385562;
+}
+
+.sectionTitleUnderline {
+  display: inline-block;
+  padding-bottom: 6px;
+  background-image: linear-gradient(90deg, #5bbfeaff, #0099D8);
+  background-repeat: no-repeat;
+  background-size: 100% 6px;
+  background-position: 0 100%;
+}
+
 @keyframes blink {
   50% {
     opacity: 0;
