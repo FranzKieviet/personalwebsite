@@ -83,7 +83,7 @@ const quickFactText = {
 
 export default function About() {
     return (
-        <Box sx={{ width: "100%", bgcolor: "#c2e7f6ff", py: 1 }}>
+        <Box id="about" sx={{ width: "100%", bgcolor: "#c2e7f6ff", py: 1 }}>
             <Container maxWidth="md" sx={{ borderRadius: 2, p: 3 }}>
                 <Typography className="sectionTitle" sx={{ fontSize: { xs: '2rem', md: '3rem' }, fontWeight: '800' }}>
                     <span className="sectionTitleUnderline">About Me:</span>
