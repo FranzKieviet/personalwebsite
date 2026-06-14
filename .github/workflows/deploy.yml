@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install dependencies
+        run: npm install --save-dev @types/node
+
       - name: Build Next.js
         run: npm run build
 
