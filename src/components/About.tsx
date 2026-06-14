@@ -2,13 +2,32 @@ import LocationPinIcon from '@mui/icons-material/LocationPin';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import { siPython, siSharp, siDotnet, siTerraform, siIcloud, siReact, siGit, siDjango, siNodedotjs, siBuymeacoffee, siDocker, siKubernetes, siOpencv } from 'simple-icons/icons';
 
-import { Container, IconButton, Box, Typography, backdropClasses } from "@mui/material";
+import { Container, IconButton, Box, Typography } from "@mui/material";
 
+const gold = "2px solid gold"
+const silver = "2px solid silver"
+const bronze = "2px solid #65401bff"
 const location = "Orange County, CA"
 const jobTitle = "Full Stack Software Engineer II"
 const company = "Pacific Life"
 
+const techStack = [
+  {name: "Python", icon: siPython, border: gold},
+  {name: "Git", icon: siGit, border: gold},
+  {name: "C#", icon: siSharp, border: silver},
+  {name: "Terraform", icon: siTerraform, border: silver},
+  {name: "AWS", icon: siIcloud, border: silver},
+  {name: "OpenCv", icon: siOpencv, border: silver},
+  {name: "DotNet", icon: siDotnet, border: bronze},
+  {name: "React", icon: siReact, border: bronze},
+  {name: "Django", icon: siDjango, border: bronze},
+  {name: "Java", icon: siBuymeacoffee, border: bronze},
+  {name: "Node.js", icon: siNodedotjs, border: bronze},
+  {name: "Docker", icon: siDocker, border: bronze},
+  {name: "Kubernetes", icon: siKubernetes, border: bronze}   
+];
 
 const bartBlue = "#0099D8";
 
@@ -34,6 +53,16 @@ const quickFactBox = {
     }
 }
 
+const logoDevStyle = {
+    width: 24,
+    height: 24,
+    "& svg": {
+        width: 24,
+        height: 24,
+        fill: bartBlue,
+    },
+};
+
 const quickFactTextBox = {
     display: "flex",
     flexDirection: "column",
@@ -56,12 +85,16 @@ export default function About() {
     return (
         <Box sx={{ width: "100%", bgcolor: "#c2e7f6ff", py: 1 }}>
             <Container maxWidth="md" sx={{ borderRadius: 2, p: 3 }}>
-                <Typography className="sectionTitle" sx={{ fontSize: { xs: '2rem', md: '3rem' }, fontWeight: '700' }}>
+                <Typography className="sectionTitle" sx={{ fontSize: { xs: '2rem', md: '3rem' }, fontWeight: '800' }}>
                     <span className="sectionTitleUnderline">About Me:</span>
                 </Typography>
 
-                {/* We add a box to center the entire button group */}
-                <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+                {/*Quick Facts */}
+                <Typography className="subSectionTitle" sx={{ py:2, fontSize: { xs: '1rem', md: '1.25rem' }, fontWeight: '500' }}>
+                    <span> QUICK FACTS</span>
+                </Typography>
+
+                <Box sx={{ display: "flex", justifyContent: "center"}}>
                     {/* Responsive container for the quick-fact boxes (wraps on small screens) */}
                     <Box sx={{
                         display: "grid",
@@ -134,6 +167,45 @@ export default function About() {
                             </Box>
                         </IconButton>
                     </Box> 
+                </Box>
+                
+                {/* LANGUAGES, FRAMEWORKS, & TOOLS */}
+                <Typography className="subSectionTitle" sx={{ py:2, fontSize: { xs: '1rem', md: '1.25rem' }, fontWeight: '500' }}>
+                    <span> LANGUAGES, FRAMEWORKS, & TOOLS</span>
+                </Typography>
+                
+                <Box sx={{py:2, display: "flex", justifyContent: "center"}}>
+                    {/* Responsive container for the quick-fact boxes (wraps on small screens) */}
+                    <Box sx={{
+                        display: "grid",
+                        gap: 3,
+                        // 1 column on xs, 2 columns on sm+, 4 columns on md+
+                        gridTemplateColumns: { xs: "1fr 1fr 1fr", sm: "1fr 1fr 1fr 1fr 1fr", md: "1fr 1fr 1fr 1fr 1fr 1fr 1fr" },
+                        width: "100%",
+                        alignItems: "stretch",
+                        justifyContent: "center",
+                    }}>
+                        {techStack.map((tech) => (
+                        <Box
+                            key={tech.name}
+                            sx={{ ...quickFactBox, border: tech.border }}
+                        >
+                            <Box
+                            sx={logoDevStyle}
+                            dangerouslySetInnerHTML={{ __html: tech.icon.svg }}
+                            />
+
+                            <Typography sx={quickFactTitle}>
+                            {tech.name}
+                            </Typography>
+                        </Box>
+                        ))}
+                        <Box>
+                            <Typography className="subSectionTitle" sx={{fontSize: { xs: '.6rem', md: '.6rem' }, fontWeight: '500' }}>
+                                <span> Outline denotes proficiency: Gold: Advanced, Silver: Intermediate, Bronze: Beginner</span>
+                            </Typography>
+                        </Box>
+                    </Box>
                 </Box>
                 </Container>
             </Box>
