@@ -3,6 +3,7 @@
 import { Container, Box } from "@mui/material";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       <Container maxWidth="md" sx={{ mt: 10, textAlign: "center" }}>
         <Hero />
       </Container>
+
+      <About />
     </Box>
   );
 }

@@ -32,7 +32,12 @@ const navButtonStyle = {
 
 export default function Navbar() {
   return (
-    <AppBar position="static" color="transparent" elevation={0}>
+    <AppBar
+      position="fixed"
+      color="transparent"
+      elevation={0}
+      sx={{ top: 0, zIndex: (theme) => theme.zIndex.appBar, backdropFilter: "blur(4px)" }}
+    >
       <Toolbar>
         {/* LEFT SIDE (logo) */}
         <Image
@@ -45,17 +50,17 @@ export default function Navbar() {
 
         {/* RIGHT SIDE (navigation links) */}
         <Box sx={{ flexGrow: 1 }} /> {/* This is a spacer that pushes the links to the right */}
-            <Button sx={navButtonStyle}>
-                Home
+            <Button sx={navButtonStyle} component="a" href="#top">
+              Home
             </Button>
-            <Button sx={navButtonStyle}>
-                About
+            <Button sx={navButtonStyle} component="a" href="#about">
+              About
             </Button>
-            <Button sx={navButtonStyle}>
-                Projects
+            <Button sx={navButtonStyle} component="a" href="#projects">
+              Projects
             </Button>
-            <Button sx={navButtonStyle}>
-                Resume
+            <Button sx={navButtonStyle} component="a" href="#resume">
+              Resume
             </Button>
 
       </Toolbar>
