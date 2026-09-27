@@ -23,6 +23,8 @@ const projects: Project[] = [
         summary: "Build an application to find interesting places that are accessible by bus near you!",
         githubUrl: "https://github.com/FranzKieviet/busable",
         liveUrl: "https://franzkieviet.com/busable",
+        imageUrl: "/devlogs/busable/cover.png",
+        devLogUrl: "/devlog/busable",
     },
 ];
 
@@ -124,8 +126,6 @@ export default function Projects() {
                                             startIcon={<ArticleIcon />}
                                             component="a"
                                             href={project.devLogUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
                                         >
                                             Dev Log
                                         </Button>
